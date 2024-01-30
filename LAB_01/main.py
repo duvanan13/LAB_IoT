@@ -34,24 +34,23 @@ client.loop_background()
 counter = 3
 sensor_type = 0
 while True:
-    # counter = counter - 1
-    # if counter <= 0:
-    #     counter = 3
-    #     print("Random data is publishing...")
-    #     if(sensor_type == 0):
-    #         print("Temperature...")
-    #         temp = random.randint(25,40)
-    #         client.publish("cambien1", temp)
-    #         sensor_type = 1
-    #     elif (sensor_type == 1):
-    #         print("Humidity...")
-    #         humi = random.randint(50, 70)
-    #         client.publish("cambien2", humi)
-    #         sensor_type = 2
-    #     elif (sensor_type == 2):
-    #         print("Light...")
-    #         light = random.randint(100, 500)
-    #         client.publish("cambien3", light)
-    #         sensor_type = 0
-    # time.sleep(1)
-    pass
+    counter = counter - 1
+    if counter <= 0:
+        counter = 3
+        print("Random data is publishing...")
+        if(sensor_type == 0):
+            print("Temperature...")
+            temp = random.randint(25,40)
+            client.publish("cambien1", temp)
+            sensor_type = 1
+        elif (sensor_type == 1):
+            print("Humidity...")
+            humi = random.randint(50, 70)
+            client.publish("cambien2", humi)
+            sensor_type = 2
+        elif (sensor_type == 2):
+            print("Light...")
+            light = random.randint(100, 500)
+            client.publish("cambien3", light)
+            sensor_type = 0
+    time.sleep(1)
